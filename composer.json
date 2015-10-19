@@ -16,5 +16,8 @@
   },
   "require-dev": {
     "codeception/codeception": "2.*"
+  },
+  "require": {
+    "guzzle/guzzle": "^3.9"
   }
 }
