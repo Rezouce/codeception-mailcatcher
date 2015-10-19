@@ -11,10 +11,10 @@
   ],
   "autoload": {
     "psr-4": {
-      "Selector\\": "src"
+      "Codeception\\Module\\": "src"
     }
   },
   "require-dev": {
-    "phpspec/phpspec": "~2.1"
+    "codeception/codeception": "2.*"
   }
 }
