@@ -47,7 +47,7 @@ class MailCatcher extends Module
     public function _before(TestCase $test)
     {
         if ($this->resetBeforeEachTest) {
-            $this->resetEmails();
+            $this->removeEmails();
         }
     }
 
