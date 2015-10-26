@@ -26,16 +26,36 @@ class MailCatcher extends Module
      */
     public function _initialize()
     {
+        if (isset($this->config['fromEnv']) && $this->config['fromEnv']) {
+            $this->loadFromEnv();
+        } else {
+            $this->loadFromConfig();
+        }
+
+        if (isset($this->config['resetBeforeEachTest'])) {
+            $this->resetBeforeEachTest = $this->config['resetBeforeEachTest'];
+        }
+    }
+
+    private function loadFromEnv()
+    {
+        if (isset($this->config['url'])) {
+            $this->url = trim(getenv($this->config['url']), '/');
+        }
+
+        if (isset($this->config['port'])) {
+            $this->port = getenv($this->config['port']);
+        }
+    }
+
+    private function loadFromConfig()
+    {
         if (isset($this->config['url'])) {
             $this->url = trim($this->config['url'], '/');
         }
 
         if (isset($this->config['port'])) {
             $this->port = $this->config['port'];
-        }
-
-        if (isset($this->config['resetBeforeEachTest'])) {
-            $this->resetBeforeEachTest = $this->config['resetBeforeEachTest'];
         }
     }
 
