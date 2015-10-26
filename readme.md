@@ -34,7 +34,7 @@ $this->hasEmails();
 $this->seeNumberEmails(5);
 
 // Check if at least an email contains a string in its source
-$this->seeInEmails('A string.');
+$this->seeInEmail('A string.');
 ```
 
 ### Grabbing emails
