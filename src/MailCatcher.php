@@ -152,7 +152,7 @@ class MailCatcher extends Module
         }
 
         $emails = $emails->filter(function(Mail $mail) use ($expected) {
-            return false !== strstr($mail->source(), $expected);
+            return false !== strstr(str_replace("=\r\n", '', $mail->source()), $expected);
         });
 
         $this->assertNotEmpty($emails->count(), 'Email contains');
