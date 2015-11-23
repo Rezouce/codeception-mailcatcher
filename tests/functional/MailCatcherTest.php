@@ -107,4 +107,13 @@ class MailCatcherTest extends \Codeception\TestCase\Test
 
         $this->assertEquals(1, $this->getEmailsByRecipients(['user1@example.com', 'user2@example.com'], true)->count());
     }
+
+    /** @test */
+    public function it_manage_special_chars()
+    {
+        mail('user3@example.com', 'éàù', 'ïËù');
+
+        $this->assertEquals(1, $this->getEmailsBySubject('éàù')->count());
+        $this->assertEquals(1, $this->seeInEmail('ïËù')->count());
+    }
 }
