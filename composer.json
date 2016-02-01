@@ -18,7 +18,7 @@
     "codeception/codeception": "2.*"
   },
   "require": {
-    "guzzle/guzzle": "^3.9",
-    "rezouce/mailcatcher": "^1.0"
+    "guzzlehttp/guzzle": "^6.1",
+    "rezouce/mailcatcher": "^1.1"
   }
 }

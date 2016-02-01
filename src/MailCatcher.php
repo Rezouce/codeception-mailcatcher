@@ -3,7 +3,7 @@ namespace Codeception\Module;
 
 use Codeception\Module;
 use Codeception\TestCase;
-use Guzzle\Http\Client;
+use GuzzleHttp\Client;
 use MailCatcher\Mail;
 use MailCatcher\MailCatcherAdapter;
 use MailCatcher\MailCollection;
@@ -82,7 +82,7 @@ class MailCatcher extends Module
     {
         if (null === $this->mailCatcher) {
             $this->mailCatcher = new \MailCatcher\MailCatcher(
-                new MailCatcherAdapter(new Client, $this->url . ':' . $this->port)
+                new MailCatcherAdapter(new Client(['base_uri' => $this->url . ':' . $this->port]))
             );
         }
 
