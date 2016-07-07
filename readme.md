@@ -5,14 +5,14 @@ This is a Codeception module to test the emails send by your application, using 
 To add it to your project run `composer require rezouce/codeception-mailcatcher`
 
 You can then add *MailCatcher* to your Codeception configuration file in the modules enabled section:
-`
+```yaml
 modules:
     enabled:
         - MailCatcher
 `
 
 By default the module will try to contact MailCatcher on http://127.0.0.1:1080, you can change it using the configuration:
-`
+```yaml
 modules:
     enabled:
         - MailCatcher
