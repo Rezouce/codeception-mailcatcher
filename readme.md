@@ -9,7 +9,7 @@ You can then add *MailCatcher* to your Codeception configuration file in the mod
 modules:
     enabled:
         - MailCatcher
-`
+```
 
 By default the module will try to contact MailCatcher on http://127.0.0.1:1080, you can change it using the configuration:
 ```yaml
@@ -20,7 +20,7 @@ modules:
         MailCatcher:
             url: 'http://127.0.0.1'
             port: '1080'
-`
+```
 
 ## Usage
 
