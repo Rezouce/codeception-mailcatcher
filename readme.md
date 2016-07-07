@@ -11,7 +11,7 @@ modules:
         - MailCatcher
 `
 
-By default the module will try to contact MailCatcher on http://127.0.0.1:1080, you can change it using the ocnfiguration:
+By default the module will try to contact MailCatcher on http://127.0.0.1:1080, you can change it using the configuration:
 `
 modules:
     enabled:
