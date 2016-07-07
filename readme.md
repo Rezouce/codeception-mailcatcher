@@ -44,8 +44,8 @@ $emails = $this->getEmailsBySubject('subject');
 $emails = $this->getEmailsBySender('user@example.com');
 $emails = $this->getEmailsByRecipients(['user1@example.com']);
 ```
-By default each of these methods will retrieve emails matching partially the given parameters.
-You can use pass true as the second parameter to match strictly.
+By default each of these methods will retrieve emails when the property contains the search criteria. 
+You can change to a strict check by giving a boolean as the second parameter with true as value.
 
 It's also possible to assert on the emails you grab:
 ```php
