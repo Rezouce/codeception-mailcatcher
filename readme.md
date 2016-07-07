@@ -42,7 +42,7 @@ $this->seeInEmail('A string.');
 <?php
 $emails = $this->getEmailsBySubject('subject');
 $emails = $this->getEmailsBySender('user@example.com');
-$emails = $this->getEmailsByrecipients(['user1@example.com']);
+$emails = $this->getEmailsByRecipients(['user1@example.com']);
 ```
 By default each of these methods will retrieve emails matching partially the given parameters.
 You can use pass true as the second parameter to match strictly.
